@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+.todo{ 
+    width: 494px;
+    margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.myhead {
+    text-align: center;
+    margin-top: 63px;
+    font-size: 52px;
+    margin-bottom: 91px;
+    color: blue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mytodo{margin-bottom: 88px;}
+
+
+.mybtn{
+    width: 179px;
+    height: 47px;
+    font-size: 29px;
+    background-color: #000000b5;
+    color: white;
+    border: 1px solid #00000070;
+    cursor: pointer;
+    margin-left: 7px;
+}
+.mybtn1{
+    width: 83px!important;
+    font-size: 21px!important;
+    height: 37px!important;
+    /*margin-left: 281px!important;*/
+    float: right;
+
+}
+.todo .yay{
+    text-align: center;
+}
+.todo form {
+    display: flex;
+    margin-top: 19px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo input{
+    width: 308px!important;
+    font-size: 20px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.todo label{
+    font-size: 15px!important;
+    color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mytext{font-size: 27px;margin-bottom: 18px;}
+
+/*.todo{ width: 494px;}
+
+.myhead{margin-bottom: 75px;}
+
+.mytodo{margin-bottom: 88px;}
+
+.mybtn{
+    width: 179px;
+    height: 47px;
+    font-size: 29px;
+    background-color: #000000b5;
+    color: white;
+    border: 1px solid #00000070;
+    cursor: pointer;
+    margin-left: 7px;
 }
+.mybtn1{
+    width: 83px!important;
+    font-size: 21px!important;
+    height: 37px!important;
+    /*margin-left: 281px!important;*/
+    /*
+    float: right;
+
+}
+
+.mybtn:hover{background-color:#000000b5!important;}
+
+form{display: flex;}
+
+form>input{width: 308px!important;}
+
+form> label{font-size: 18px!important;}
+
+.mytext{font-size: 27px;margin-bottom: 18px;}*/
