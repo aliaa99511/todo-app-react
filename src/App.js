@@ -1,5 +1,78 @@
 import React, { Component } from 'react'
 import './App.css';
+import Todoitems from './components/Todoitems';
+import Additem from './components/Additem';
+
+class App extends Component {
+
+  state={
+    items:[
+        {id:1, name: 'omar' ,age:20},
+        {id:2, name: 'Ahmed' ,age:15},
+        {id:3, name: 'Ali' ,age:30}
+    ]
+  };
+
+  deleteApp=(index)=>{
+
+    const items= [...this.state.items]
+    items.splice(index,1);
+    this.setState({
+      items
+    })
+
+    /*
+    همرر ال id  كبروبس فوق بدل الاندكس وهناك كمان في الفولدر
+    let items=this.state.items.filter(item=>{
+      return item.id !== id
+    })
+    this.setState({
+      items
+    })
+    */
+   /*
+    همرر ال id  كبروبس فوق بدل الاندكس وهناك كمان في الفولدر
+    const items= this.state.items
+    const i = items.findIndex(item => item.id === id);
+    items.splice(i,1);
+    this.setState({
+      items
+    })
+    */
+  }
+  addApp=(item)=>{
+    item.id=Math.random()
+    const items=this.state.items;
+    items.push(item);
+    this.setState({
+    items
+    })
+}
+
+  render() {
+ 
+    return (
+      <div className="App container">
+        <h1 className="text-center">todo App</h1>
+
+        <Todoitems items={this.state.items}
+                   deleteApp={this.deleteApp}/>
+
+        <Additem addApp={this.addApp}/>
+
+      </div>
+
+    )
+  }
+}
+
+export default App;
+
+
+
+/*
+import React, { Component } from 'react'
+import './App.css';
 
 class App extends Component {
 
@@ -66,7 +139,6 @@ class App extends Component {
           <button className="mybtn" type="submit" >add</button>
         </form>
 
-
       </div>
 
     )
@@ -75,37 +147,4 @@ class App extends Component {
 
 export default App;
 
-
-/*
-
-
-    isEdit:false,
-
-
-    let {isEdit} =this.state;
-
-
-
-toggleState=()=>{
-  let {isEdit}=this.state;
-  this.setState({
-    isEdit:!isEdit
-  })
-}
-
-
-renderUpdate=()=>{
-  return(
-    <form>
-      <input type="text" defaultValue={this.state.text}/>
-      <button>update</button>
-    </form>
-  )
-}
-  
-
-  <button className=" myedit" onClick={()=>{this.toggleState()}}>edit</button>
-
-
-<div>{ isEdit ? this.renderUpdate() : todoapp }</div>
 */
